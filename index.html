@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hiện khảo sát</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav-logo">
+            <a href="#">
+                <div class="img-logo"> <img src="https://code.ptit.edu.vn/2020/images/logo_ptit.png" alt="Logo"></div>
+            </a>
+        </div>
+        <div class="header-title">
+            <a href="#">PTIT Khảo Sát</a>
+        </div>
+    </div>
+    <div class="information">
+        <div class="user-information">
+            <!-- <h1 class="title">Khảo sát PTIT</h1> -->
+            <div class="zone">
+                
+                <h1>Nhập thông tin cá nhân:</h1>
+                <label for="name">Họ và tên: </label>
+                <input type="text" name="name" id="name" required>
+
+                <br>
+
+                <label for="dob">Ngày sinh: </label>
+                <input type="text" id="dob" required>
+                <br>
+                <label for="code">Căn cước công dân: </label>
+                <input type="text"  id="code" required>
+                <br>
+                <label for="address">Địa chỉ: </label>
+                <input type="text" name="address" id="adress" required>
+                <br>
+                <button type="submit" id="confirm-btn" onclick="render()">Bắt đầu khảo sát</button>
+
+            </div>
+
+            <div class="logo">
+                <img src="./Logo_PTIT_University.png" alt="logo">
+                
+            </div>
+           
+            
+
+        </div>
+
+
+    </div>
+    <div class="question-information" id="question-information">
+        <div class="test-name">Khảo sát 01</div>
+
+        <div class="test-time" id="test-time">
+            <p>00:00</p>
+        </div>
+        <hr>
+        <div class="grid-container" id="grid"> 
+           
+        </div>
+
+        <div>
+            <button onclick="OpenPopUp()">Kết thúc</button>
+        </div>
+    </div>
+
+    <div class="question-container" id="question-container">
+
+        <div class="part" id="part-1">
+            <h1>Phần 1: Chọn đúng hoặc sai</h1>
+
+        </div>
+
+        <div class="part" id="part-2">
+            <h1>Phần 2: Chọn đáp án chính xác nhất</h1>
+        </div>
+
+        <div class="part" id="part-3">
+            <h1>Phần 3: Chọn nhiều đáp án</h1>
+
+        </div>
+
+        <div class="part" id="part-4">
+            <h1>Phần 4: Tự luận</h1>
+        </div>
+    </div>
+
+    <div class  = "layer" id="layer">
+
+        <div class="pop-up" id="pop-up">
+            <h1>Cảm ơn bạn đã hoàn thành bài khảo sát</h1>
+            <p>Mọi thông tin đã được ghi nhận.</p>
+
+            <p id="name"></p>
+            <p id="date"></p>
+            <p id="name"></p>
+            <p id="name"></p>
+            <p id = "result"></p>
+            <button onclick="ClosePopUp()">Thoát</button>
+        </div>
+
+    </div>
+</body>
+
+<script src="./index.js"></script>
+</html>
